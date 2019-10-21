@@ -20,24 +20,28 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AnimatedSprite.h" />
+    <ClInclude Include="Falling.h" />
+    <ClInclude Include="Landing.h" />
     <ClInclude Include="PlayerFSM.h" />
-    <ClInclude Include="Climbing.h" />
     <ClInclude Include="Debug.h" />
     <ClInclude Include="Idle.h" />
     <ClInclude Include="Input.h" />
     <ClInclude Include="Jumping.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="State.h" />
+    <ClInclude Include="Walking.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AnimatedSprite.cpp" />
+    <ClCompile Include="Falling.cpp" />
+    <ClCompile Include="Landing.cpp" />
     <ClCompile Include="PlayerMachine.cpp" />
-    <ClCompile Include="Climbing.cpp" />
     <ClCompile Include="Idle.cpp" />
     <ClCompile Include="Input.cpp" />
     <ClCompile Include="Jumping.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Player.cpp" />
+    <ClCompile Include="Walking.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\README.md" />

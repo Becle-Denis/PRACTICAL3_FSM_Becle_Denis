@@ -11,7 +11,6 @@ public:
 	void handleInput();
 	void update();
 	void jumping(PlayerFSM* a);
-	void climbing(PlayerFSM* a);
 };
 
 #endif // !IDLE_H
