@@ -23,9 +23,9 @@ public:
 	{
 		DEBUG_MSG("State::Jumping");
 	}
-	virtual void climbing(PlayerFSM* a)
+	virtual void walking(PlayerFSM* a)
 	{
-		DEBUG_MSG("State::Climbing");
+		DEBUG_MSG("State::walking");
 	}
 };
 

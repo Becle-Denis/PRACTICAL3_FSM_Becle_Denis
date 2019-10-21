@@ -6,11 +6,10 @@
 class Idle : public State
 {
 public:
+
 	Idle() {};
 	~Idle() {};
-	void handleInput();
-	void update();
-	void jumping(PlayerFSM* a);
+
 };
 
 #endif // !IDLE_H
