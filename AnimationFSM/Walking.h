@@ -9,6 +9,10 @@ public:
 	Walking() {};
 	~Walking() {};
 
+	void idle(PlayerFSM* a) override;
+	void jumping(PlayerFSM* a) override;
+	void falling(PlayerFSM* a) override;
+
 };
 
 
