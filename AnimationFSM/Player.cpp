@@ -31,7 +31,7 @@ void Player::handleInput(Input in)
 	switch (in.getCurrent())
 	{
 	case Input::Action::IDLE:
-		std::cout << "Player Idling" << std::endl;
+		//std::cout << "Player Idling" << std::endl;
 		m_state.idle();
 		break;
 	case Input::Action::UP:

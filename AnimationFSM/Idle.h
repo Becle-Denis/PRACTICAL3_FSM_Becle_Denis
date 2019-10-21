@@ -10,6 +10,8 @@ public:
 	Idle() {};
 	~Idle() {};
 
+
+
 };
 
 #endif // !IDLE_H

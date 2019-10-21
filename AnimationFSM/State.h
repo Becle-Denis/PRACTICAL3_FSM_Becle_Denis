@@ -27,6 +27,14 @@ public:
 	{
 		DEBUG_MSG("State::walking");
 	}
+	virtual void falling(PlayerFSM* a)
+	{
+		DEBUG_MSG("State::falling");
+	}
+	virtual void landing(PlayerFSM* a)
+	{
+		DEBUG_MSG("State::landing");
+	}
 };
 
 #endif // ! ANIMATION_H
