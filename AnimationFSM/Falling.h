@@ -5,6 +5,7 @@
 
 class Falling : public State
 {
+public:
 	Falling() {};
 	~Falling() {};
 };

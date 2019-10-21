@@ -10,7 +10,9 @@ public:
 	Idle() {};
 	~Idle() {};
 
-
+	void walking(PlayerFSM* a) override;
+	void jumping(PlayerFSM* a) override;
+	void falling(PlayerFSM* a) override;
 
 };
 
