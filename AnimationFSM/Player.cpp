@@ -43,7 +43,7 @@ void Player::handleInput(Input in)
 		m_state.walking();
 		break;
 	case Input::Action::RIGHT:
-		//std::cout << "Player Idling" << std::endl;
+		//std::cout << "Player Right" << std::endl;
 		m_state.walking();
 		break;
 	default:

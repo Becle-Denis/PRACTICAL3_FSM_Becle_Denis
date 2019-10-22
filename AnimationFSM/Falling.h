@@ -8,6 +8,9 @@ class Falling : public State
 public:
 	Falling() {};
 	~Falling() {};
+
+	void landing(PlayerFSM* a) override;
+	void jumping(PlayerFSM* a) override;
 };
 
 #endif // !FALLING_H
