@@ -13,11 +13,13 @@ void Falling::down(PlayerFSM* a)
 
 void Falling::up(PlayerFSM* a)
 {
-
-		std::cout << "Falling -> Jumping" << std::endl;
+	if (m_remainingJump > 0)
+	{
+		m_remainingJump--;
 		State* previous = a->getPrevious();
+		std::cout << "Falling -> Jumping" << std::endl;
 		a->setPrevious(a->getCurrent());
-		a->setCurrent(new Jumping());
+		a->setCurrent(new Jumping(m_remainingJump));
 		delete previous;
-
+	}
 }

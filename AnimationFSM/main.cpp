@@ -51,22 +51,18 @@ int main()
 			case sf::Event::KeyPressed:
 				if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
 				{
-					std::cout << "LEFT" << std::endl;
 					input.setCurrent(Input::Action::LEFT);
 				}
 				else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
 				{
-					std::cout << "RIGHT" << std::endl;
 					input.setCurrent(Input::Action::RIGHT);
 				}
 				else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up))
 				{
-					std::cout << "UP" << std::endl;
 					input.setCurrent(Input::Action::UP);
 				}
 				else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down))
 				{
-					std::cout << "DOWN" << std::endl;
 					input.setCurrent(Input::Action::DOWN);
 				}
 				break;

@@ -6,18 +6,16 @@
 class Jumping : public State
 {
 public:
-	Jumping(bool canRejump = true) : m_canRejump(canRejump) {};
+	Jumping(int remainingJump = 1) : m_remainingJump(remainingJump) {};
 	~Jumping() {};
 
 
 	void up(PlayerFSM* a) override;
 	void down(PlayerFSM* a) override;
 
-
-	bool getRejump();
 	
 private:
-	bool m_canRejump;
+	int m_remainingJump;
 
 };
 

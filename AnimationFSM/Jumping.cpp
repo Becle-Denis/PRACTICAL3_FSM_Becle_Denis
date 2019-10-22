@@ -9,12 +9,13 @@
 
 void Jumping::up(PlayerFSM* a)
 {
-	if (m_canRejump)
+	if (m_remainingJump > 0)
 	{
+		m_remainingJump--;
 		std::cout << "Jumping -> Jumping" << std::endl;
 		State* previous = a->getPrevious();
 		a->setPrevious(a->getCurrent());
-		a->setCurrent(new Jumping(false));
+		a->setCurrent(new Jumping(m_remainingJump));
 		delete previous;
 	}
 }
@@ -24,14 +25,10 @@ void Jumping::down(PlayerFSM* a)
 	std::cout << "Jumping -> Falling" << std::endl;
 	State* previous = a->getPrevious();
 	a->setPrevious(a->getCurrent());
-	a->setCurrent(new Falling());
+	a->setCurrent(new Falling(m_remainingJump));
 	delete previous;
 }
 
-bool Jumping::getRejump()
-{
-	return m_canRejump;
-}
 
 /*
 void Jumping::idle(PlayerFSM* a)

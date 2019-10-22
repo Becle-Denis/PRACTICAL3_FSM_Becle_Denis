@@ -6,12 +6,14 @@
 class Falling : public State
 {
 public:
-	Falling() {};
+	Falling(int remaingJump = 2) : m_remainingJump(remaingJump) {};
 	~Falling() {};
 
 	void up(PlayerFSM* a) override;
 	void down(PlayerFSM* a) override;
 
+private:
+	int m_remainingJump;
 };
 
 #endif // !FALLING_H
