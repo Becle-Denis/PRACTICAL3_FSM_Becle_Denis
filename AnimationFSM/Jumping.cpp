@@ -7,7 +7,7 @@
 
 
 
-void Jumping::jumping(PlayerFSM* a)
+void Jumping::up(PlayerFSM* a)
 {
 	if (m_canRejump)
 	{
@@ -19,7 +19,7 @@ void Jumping::jumping(PlayerFSM* a)
 	}
 }
 
-void Jumping::falling(PlayerFSM* a)
+void Jumping::down(PlayerFSM* a)
 {
 	std::cout << "Jumping -> Falling" << std::endl;
 	State* previous = a->getPrevious();

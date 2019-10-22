@@ -9,8 +9,9 @@ public:
 	Falling() {};
 	~Falling() {};
 
-	void landing(PlayerFSM* a) override;
-	void jumping(PlayerFSM* a) override;
+	void up(PlayerFSM* a) override;
+	void down(PlayerFSM* a) override;
+
 };
 
 #endif // !FALLING_H

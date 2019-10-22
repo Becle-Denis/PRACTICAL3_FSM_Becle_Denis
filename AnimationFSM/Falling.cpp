@@ -2,7 +2,7 @@
 #include "Landing.h"
 #include "Jumping.h"
 
-void Falling::landing(PlayerFSM* a)
+void Falling::down(PlayerFSM* a)
 {
 	std::cout << "Falling -> Landing" << std::endl;
 	State* previous = a->getPrevious();
@@ -11,7 +11,7 @@ void Falling::landing(PlayerFSM* a)
 	delete previous;
 }
 
-void Falling::jumping(PlayerFSM* a)
+void Falling::up(PlayerFSM* a)
 {
 
 		std::cout << "Falling -> Jumping" << std::endl;

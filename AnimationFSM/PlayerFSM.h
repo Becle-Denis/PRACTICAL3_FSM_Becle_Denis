@@ -20,11 +20,11 @@ public:
 	State* getCurrent();
 	State* getPrevious();
 	
-	void idle();
-	void jumping();
-	void walking();
-	void falling();
-	void landing();
+	void goingUp();
+	void goingDown();
+	void goingLeft();
+	void goingRight();
+	void idling();
 
 // Try uncommenting and comment the declaration above
 //private:

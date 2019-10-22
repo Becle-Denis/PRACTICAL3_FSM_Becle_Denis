@@ -10,9 +10,10 @@ public:
 	Idle() {};
 	~Idle() {};
 
-	void walking(PlayerFSM* a) override;
-	void jumping(PlayerFSM* a) override;
-	void falling(PlayerFSM* a) override;
+	void up(PlayerFSM* a) override;
+	void down(PlayerFSM* a) override;
+	void left(PlayerFSM* a) override;
+	void right(PlayerFSM* a) override;
 
 };
 

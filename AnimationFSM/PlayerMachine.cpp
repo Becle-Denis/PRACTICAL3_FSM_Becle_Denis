@@ -28,27 +28,28 @@ State* PlayerFSM::getPrevious()
 	return m_previous;
 }
 
-void PlayerFSM::idle()
+void PlayerFSM::goingUp()
 {
-	m_current->idle(this);
+	m_current->up(this);
 }
 
-void PlayerFSM::jumping()
+void PlayerFSM::goingDown()
 {
-	m_current->jumping(this);
+	m_current->down(this);
 }
 
-void PlayerFSM::walking()
+void PlayerFSM::goingLeft()
 {
-	m_current->walking(this);
+	m_current->left(this);
 }
 
-void PlayerFSM::falling()
+void PlayerFSM::goingRight()
 {
-	m_current->falling(this);
+	m_current->right(this);
 }
 
-void PlayerFSM::landing()
+void PlayerFSM::idling()
 {
-	m_current->landing(this);
+	m_current->idling(this);
 }
+

@@ -29,7 +29,8 @@
     <ClInclude Include="Jumping.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="State.h" />
-    <ClInclude Include="Walking.h" />
+    <ClInclude Include="WalkingLeft.h" />
+    <ClInclude Include="WalkingRight.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AnimatedSprite.cpp" />
@@ -41,7 +42,8 @@
     <ClCompile Include="Jumping.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Player.cpp" />
-    <ClCompile Include="Walking.cpp" />
+    <ClCompile Include="WalkingLeft.cpp" />
+    <ClCompile Include="WalkingRight.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\README.md" />

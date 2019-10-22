@@ -9,8 +9,10 @@ public:
 	Jumping(bool canRejump = true) : m_canRejump(canRejump) {};
 	~Jumping() {};
 
-	void jumping(PlayerFSM* a) override;
-	void falling(PlayerFSM* a) override;
+
+	void up(PlayerFSM* a) override;
+	void down(PlayerFSM* a) override;
+
 
 	bool getRejump();
 	

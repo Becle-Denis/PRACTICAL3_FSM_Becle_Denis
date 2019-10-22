@@ -15,26 +15,15 @@ public:
 
 	virtual void update() {}
 
-	virtual void idle(PlayerFSM* a)
-	{
-		DEBUG_MSG("State::Idling");
-	}
-	virtual void jumping(PlayerFSM* a)
-	{
-		DEBUG_MSG("State::Jumping");
-	}
-	virtual void walking(PlayerFSM* a)
-	{
-		DEBUG_MSG("State::walking");
-	}
-	virtual void falling(PlayerFSM* a)
-	{
-		DEBUG_MSG("State::falling");
-	}
-	virtual void landing(PlayerFSM* a)
-	{
-		DEBUG_MSG("State::landing");
-	}
+	virtual void up(PlayerFSM* a) {};
+
+	virtual void down(PlayerFSM* a) {};
+
+	virtual void left(PlayerFSM* a) {};
+
+	virtual void right(PlayerFSM* a) {};
+
+	virtual void idling(PlayerFSM* a) {};
 };
 
 #endif // ! ANIMATION_H

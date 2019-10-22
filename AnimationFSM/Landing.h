@@ -9,7 +9,8 @@ public:
 	Landing() {};
 	~Landing() {};
 
-	void idle(PlayerFSM* a) override;
+	void up(PlayerFSM* a) override;
+
 
 };
 

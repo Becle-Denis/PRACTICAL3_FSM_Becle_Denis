@@ -69,13 +69,16 @@
     <ClInclude Include="PlayerFSM.h">
       <Filter>Header Files\FSM</Filter>
     </ClInclude>
-    <ClInclude Include="Walking.h">
-      <Filter>Header Files\FSM</Filter>
-    </ClInclude>
     <ClInclude Include="Falling.h">
       <Filter>Header Files\FSM</Filter>
     </ClInclude>
     <ClInclude Include="Landing.h">
+      <Filter>Header Files\FSM</Filter>
+    </ClInclude>
+    <ClInclude Include="WalkingLeft.h">
+      <Filter>Header Files\FSM</Filter>
+    </ClInclude>
+    <ClInclude Include="WalkingRight.h">
       <Filter>Header Files\FSM</Filter>
     </ClInclude>
   </ItemGroup>
@@ -101,13 +104,16 @@
     <ClCompile Include="PlayerMachine.cpp">
       <Filter>Source Files\FSM</Filter>
     </ClCompile>
-    <ClCompile Include="Walking.cpp">
-      <Filter>Source Files\FSM</Filter>
-    </ClCompile>
     <ClCompile Include="Falling.cpp">
       <Filter>Source Files\FSM</Filter>
     </ClCompile>
     <ClCompile Include="Landing.cpp">
+      <Filter>Source Files\FSM</Filter>
+    </ClCompile>
+    <ClCompile Include="WalkingLeft.cpp">
+      <Filter>Source Files\FSM</Filter>
+    </ClCompile>
+    <ClCompile Include="WalkingRight.cpp">
       <Filter>Source Files\FSM</Filter>
     </ClCompile>
   </ItemGroup>
