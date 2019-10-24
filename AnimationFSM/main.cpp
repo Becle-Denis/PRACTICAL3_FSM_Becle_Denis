@@ -14,7 +14,7 @@ int main()
 
 	// Load a sprite to display
 	sf::Texture texture;
-	if (!texture.loadFromFile("assets\\grid.png")) {
+	if (!texture.loadFromFile("assets\\raymanGrid.png")) {
 		DEBUG_MSG("Failed to load file");
 		return EXIT_FAILURE;
 	}
