@@ -6,14 +6,15 @@
 class Landing : public State
 {
 public:
-	Landing() {};
+	Landing();
 	~Landing() {};
 	
 	void update(PlayerFSM* a) override;
 
 	void idle(PlayerFSM* a) override;
 
-
+private:
+	long int m_timeCreated;
 };
 
 

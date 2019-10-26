@@ -6,7 +6,7 @@
 class Falling : public State
 {
 public:
-	Falling(int remaingJump = 2) : m_remainingJump(remaingJump) {};
+	Falling(int remaingJump = 2);
 	~Falling() {};
 
 	void handleInput(PlayerFSM* a, sf::Event event) override;
@@ -18,6 +18,8 @@ public:
 
 private:
 	int m_remainingJump;
+
+	long int m_timeCreated;
 };
 
 #endif // !FALLING_H

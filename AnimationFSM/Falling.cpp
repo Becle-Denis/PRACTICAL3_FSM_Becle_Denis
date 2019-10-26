@@ -1,11 +1,23 @@
 #include "Falling.h"
 #include "Landing.h"
 #include "Jumping.h"
+#include <ctime>
+#include <string>
 
+Falling::Falling(int remaingJump)
+	: m_remainingJump(remaingJump),
+	m_timeCreated(static_cast<long int>(time(nullptr)))
+{
+
+}
 
 void Falling::update(PlayerFSM* a)
 {
-
+	long int actualTime = static_cast<long int>(time(nullptr));
+	if (actualTime > m_timeCreated + 1)
+	{
+		landing(a);
+	}
 }
 
 void Falling::handleInput(PlayerFSM* a, sf::Event event)

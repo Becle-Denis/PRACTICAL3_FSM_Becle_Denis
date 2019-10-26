@@ -33,5 +33,6 @@ void Player::handleInput(sf::Event& event)
 void Player::update()
 {
 	//std::cout << "Handle Update" << std::endl;
+	m_state.update();
 	m_animated_sprite.update();
 }

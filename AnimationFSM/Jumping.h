@@ -6,7 +6,7 @@
 class Jumping : public State
 {
 public:
-	Jumping(int remainingJump = 1) : m_remainingJump(remainingJump) {};
+	Jumping(int remainingJump = 1);
 	~Jumping() {};
 
 	void handleInput(PlayerFSM* a, sf::Event event) override;
@@ -18,7 +18,7 @@ public:
 	
 private:
 	int m_remainingJump;
-
+	long int m_timeCreated;
 };
 
 #endif // !IDLE_H

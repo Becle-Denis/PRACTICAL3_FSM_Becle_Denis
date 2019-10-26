@@ -1,11 +1,16 @@
 #include <Jumping.h>
 #include <Idle.h>
 #include <Falling.h>
-
 #include <string>
+#include <ctime>
 
 
+Jumping::Jumping(int remainingJump) : 
+	m_remainingJump(remainingJump),
+	m_timeCreated(static_cast<long int>(time(nullptr)))
+{
 
+}
 
 void Jumping::handleInput(PlayerFSM* a, sf::Event event)
 {
@@ -17,6 +22,11 @@ void Jumping::handleInput(PlayerFSM* a, sf::Event event)
 
 void Jumping::update(PlayerFSM* a)
 {
+	long int actualTime = static_cast<long int>(time(nullptr));
+	if (actualTime > m_timeCreated + 1)
+	{
+		falling(a);
+	}
 }
 
 void Jumping::jumping(PlayerFSM* a)

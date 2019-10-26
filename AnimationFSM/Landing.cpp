@@ -2,9 +2,19 @@
 #include "Idle.h"
 
 
+Landing::Landing() :
+	m_timeCreated(static_cast<long int>(time(nullptr)))
+{
+
+}
+
 void Landing::update(PlayerFSM* a)
 {
-	
+	long int actualTime = static_cast<long int>(time(nullptr));
+	if (actualTime > m_timeCreated)
+	{
+		idle(a);
+	}
 }
 
 void Landing::idle(PlayerFSM* a)
