@@ -2,7 +2,6 @@
 #include <SFML/Graphics.hpp>
 #include <AnimatedSprite.h>
 #include <Player.h>
-#include <Input.h>
 #include <Debug.h>
 
 using namespace std;
@@ -30,50 +29,34 @@ int main()
 
 	// Setup the Player
 	Player player(animated_sprite);
-	Input input;
 	
 	// Start the game loop
 	while (window.isOpen())
 	{
-		//reinitialise input 
-		input.setCurrent(Input::Action::IDLE);
 
 		// Process events
 		sf::Event event;
 		while (window.pollEvent(event))
 		{
 			switch (event.type)
+
 			{
+
 			case sf::Event::Closed:
+
 				// Close window : exit
+
 				window.close();
+
 				break;
+
 			case sf::Event::KeyPressed:
-				if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
-				{
-					input.setCurrent(Input::Action::LEFT);
-				}
-				else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
-				{
-					input.setCurrent(Input::Action::RIGHT);
-				}
-				else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up))
-				{
-					input.setCurrent(Input::Action::UP);
-				}
-				else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down))
-				{
-					input.setCurrent(Input::Action::DOWN);
-				}
-				break;
-			default:
-				input.setCurrent(Input::Action::IDLE);
+				// Handle input event to Player
+				player.handleInput(event);
 				break;
 			}
 		}
 
-		// Handle input to Player
-		player.handleInput(input);
 
 		// Update the Player
 		player.update();

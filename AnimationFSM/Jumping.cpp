@@ -7,7 +7,19 @@
 
 
 
-void Jumping::up(PlayerFSM* a)
+void Jumping::handleInput(PlayerFSM* a, sf::Event event)
+{
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up))
+	{
+		jumping(a);
+	}
+}
+
+void Jumping::update(PlayerFSM* a)
+{
+}
+
+void Jumping::jumping(PlayerFSM* a)
 {
 	if (m_remainingJump > 0)
 	{
@@ -20,7 +32,7 @@ void Jumping::up(PlayerFSM* a)
 	}
 }
 
-void Jumping::down(PlayerFSM* a)
+void Jumping::falling(PlayerFSM* a)
 {
 	std::cout << "Jumping -> Falling" << std::endl;
 	State* previous = a->getPrevious();

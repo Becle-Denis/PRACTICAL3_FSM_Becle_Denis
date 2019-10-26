@@ -1,6 +1,8 @@
 #ifndef PLAYER_FSM_H
 #define PLAYER_FSM_H
 
+#include <SFML/Graphics.hpp>
+
 class PlayerFSM
 {
 
@@ -20,11 +22,9 @@ public:
 	State* getCurrent();
 	State* getPrevious();
 	
-	void goingUp();
-	void goingDown();
-	void goingLeft();
-	void goingRight();
-	void idling();
+	void update();
+
+	void handleInput(sf::Event& event);
 
 // Try uncommenting and comment the declaration above
 //private:

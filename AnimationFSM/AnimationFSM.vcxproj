@@ -25,7 +25,6 @@
     <ClInclude Include="PlayerFSM.h" />
     <ClInclude Include="Debug.h" />
     <ClInclude Include="Idle.h" />
-    <ClInclude Include="Input.h" />
     <ClInclude Include="Jumping.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="State.h" />
@@ -38,7 +37,6 @@
     <ClCompile Include="Landing.cpp" />
     <ClCompile Include="PlayerMachine.cpp" />
     <ClCompile Include="Idle.cpp" />
-    <ClCompile Include="Input.cpp" />
     <ClCompile Include="Jumping.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Player.cpp" />

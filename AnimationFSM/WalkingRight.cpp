@@ -4,7 +4,23 @@
 #include "Jumping.h"
 #include "Falling.h"
 
-void WalkingRight::left(PlayerFSM* a)
+void WalkingRight::handleInput(PlayerFSM* a, sf::Event event)
+{
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up))
+	{
+		jumping(a);
+	}
+	else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down))
+	{
+		falling(a);
+	}
+	else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
+	{
+		idle(a);
+	}
+}
+
+void WalkingRight::idle(PlayerFSM* a)
 {
 	std::cout << "Walking Right -> Idle" << std::endl;
 	State* previous = a->getPrevious();
@@ -13,7 +29,9 @@ void WalkingRight::left(PlayerFSM* a)
 	delete previous;
 }
 
-void WalkingRight::up(PlayerFSM* a)
+
+
+void WalkingRight::jumping(PlayerFSM* a)
 {
 	std::cout << "Walking Right -> Jumping" << std::endl;
 	State* previous = a->getPrevious();
@@ -22,7 +40,7 @@ void WalkingRight::up(PlayerFSM* a)
 	delete previous;
 }
 
-void WalkingRight::down(PlayerFSM* a)
+void WalkingRight::falling(PlayerFSM* a)
 {
 	std::cout << "Walking Right -> Falling" << std::endl;
 	State* previous = a->getPrevious();

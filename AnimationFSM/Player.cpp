@@ -24,34 +24,10 @@ AnimatedSprite& Player::getAnimatedSprite()
 	return m_animated_sprite;
 }
 
-void Player::handleInput(Input in)
+void Player::handleInput(sf::Event& event)
 {
 	DEBUG_MSG("Handle Input");
-
-	switch (in.getCurrent())
-	{
-	case Input::Action::DOWN:
-		//std::cout << "Player Idling" << std::endl;
-		m_state.goingDown();
-		break;
-	case Input::Action::UP:
-		//std::cout << "Player Up" << std::endl;
-		m_state.goingUp();
-		break;
-	case Input::Action::LEFT:
-		//std::cout << "Player Left" << std::endl;
-		m_state.goingLeft();
-		break;
-	case Input::Action::RIGHT:
-		//std::cout << "Player Right" << std::endl;
-		m_state.goingRight();
-		break;
-	case Input::Action::IDLE:
-		m_state.idling();
-		break;
-	default:
-		break;
-	}
+	m_state.handleInput(event);
 }
 
 void Player::update()

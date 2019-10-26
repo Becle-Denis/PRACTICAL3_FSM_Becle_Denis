@@ -1,7 +1,8 @@
 #ifndef PLAYER_H
 #define PLAYER_H
 
-#include <Input.h>
+
+#include <SFML/Graphics.hpp>
 #include <PlayerFSM.h>
 #include <AnimatedSprite.h>
 
@@ -16,7 +17,7 @@ public:
 	Player(const AnimatedSprite&);
 	~Player();
 	AnimatedSprite& getAnimatedSprite();
-	void handleInput(Input);
+	void handleInput(sf::Event& event);
 	void update();
 };
 

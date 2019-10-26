@@ -4,26 +4,28 @@
 #include <iostream>
 #include <typeinfo>
 
-#include <Input.h>
+#include <SFML/Graphics.hpp>
 #include <PlayerFSM.h>
 #include <Debug.h>
 
 class State
 {
 public:
-	virtual void handleInput() {}
+	virtual void handleInput(PlayerFSM* a, sf::Event event) {}
 
-	virtual void update() {}
+	virtual void update(PlayerFSM* a) {}
 
-	virtual void up(PlayerFSM* a) {};
+	virtual void falling(PlayerFSM* a) {};
 
-	virtual void down(PlayerFSM* a) {};
+	virtual void idle(PlayerFSM* a) {};
 
-	virtual void left(PlayerFSM* a) {};
+	virtual void jumping(PlayerFSM* a) {};
 
-	virtual void right(PlayerFSM* a) {};
+	virtual void landing(PlayerFSM* a) {};
 
-	virtual void idling(PlayerFSM* a) {};
+	virtual void walkingLeft(PlayerFSM* a) {};
+
+	virtual void walkingRight(PlayerFSM* a) {};
 };
 
 #endif // ! ANIMATION_H

@@ -8,8 +8,10 @@ class Landing : public State
 public:
 	Landing() {};
 	~Landing() {};
+	
+	void update(PlayerFSM* a) override;
 
-	void up(PlayerFSM* a) override;
+	void idle(PlayerFSM* a) override;
 
 
 };

@@ -10,9 +10,11 @@ public:
 	WalkingLeft() {};
 	~WalkingLeft() {};
 
-	void up(PlayerFSM* a) override;
-	void down(PlayerFSM* a) override;
-	void right(PlayerFSM* a) override;
+	void handleInput(PlayerFSM* a, sf::Event event) override;
+
+	void jumping(PlayerFSM* a) override;
+	void falling(PlayerFSM* a) override;
+	void idle(PlayerFSM* a) override;
 };
 
 

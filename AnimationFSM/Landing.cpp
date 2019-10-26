@@ -2,7 +2,12 @@
 #include "Idle.h"
 
 
-void Landing::up(PlayerFSM* a)
+void Landing::update(PlayerFSM* a)
+{
+	
+}
+
+void Landing::idle(PlayerFSM* a)
 {
 	std::cout << "Landing -> Idle" << std::endl;
 	State* previous = a->getPrevious();

@@ -28,28 +28,13 @@ State* PlayerFSM::getPrevious()
 	return m_previous;
 }
 
-void PlayerFSM::goingUp()
+void PlayerFSM::update()
 {
-	m_current->up(this);
+	m_current->update(this);
 }
 
-void PlayerFSM::goingDown()
+void PlayerFSM::handleInput(sf::Event& event)
 {
-	m_current->down(this);
-}
-
-void PlayerFSM::goingLeft()
-{
-	m_current->left(this);
-}
-
-void PlayerFSM::goingRight()
-{
-	m_current->right(this);
-}
-
-void PlayerFSM::idling()
-{
-	m_current->idling(this);
+	m_current->handleInput(this, event);
 }
 

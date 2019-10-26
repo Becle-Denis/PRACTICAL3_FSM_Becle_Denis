@@ -9,9 +9,11 @@ public:
 	Jumping(int remainingJump = 1) : m_remainingJump(remainingJump) {};
 	~Jumping() {};
 
+	void handleInput(PlayerFSM* a, sf::Event event) override;
+	void update(PlayerFSM* a) override;
 
-	void up(PlayerFSM* a) override;
-	void down(PlayerFSM* a) override;
+	void jumping(PlayerFSM* a) override;
+	void falling(PlayerFSM* a) override;
 
 	
 private:

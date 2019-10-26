@@ -6,7 +6,29 @@
 
 #include <string>
 
-void Idle::left(PlayerFSM* a)
+
+void Idle::handleInput(PlayerFSM* a, sf::Event event)
+{
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up))
+	{
+		jumping(a);
+	}
+	else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down))
+	{
+		falling(a);
+	}
+	else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
+	{
+		walkingLeft(a);
+	}
+	else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
+	{
+		walkingRight(a);
+	}
+}
+
+
+void Idle::walkingLeft(PlayerFSM* a)
 {
 	std::cout << "Idle -> Walking Left" << std::endl;
 	State* previous = a->getPrevious();
@@ -15,7 +37,7 @@ void Idle::left(PlayerFSM* a)
 	delete previous;
 }
 
-void Idle::right(PlayerFSM* a)
+void Idle::walkingRight(PlayerFSM* a)
 {
 	std::cout << "Idle -> Walking Right" << std::endl;
 	State* previous = a->getPrevious();
@@ -24,7 +46,7 @@ void Idle::right(PlayerFSM* a)
 	delete previous;
 }
 
-void Idle::up(PlayerFSM* a)
+void Idle::jumping(PlayerFSM* a)
 {
 	std::cout << "Idle -> Jumping" << std::endl;
 	State* previous = a->getPrevious();
@@ -33,7 +55,7 @@ void Idle::up(PlayerFSM* a)
 	delete previous;
 }
 
-void Idle::down(PlayerFSM* a)
+void Idle::falling(PlayerFSM* a)
 {
 	std::cout << "Idle -> Falling" << std::endl;
 	State* previous = a->getPrevious();
@@ -41,6 +63,8 @@ void Idle::down(PlayerFSM* a)
 	a->setCurrent(new Falling());
 	delete previous;
 }
+
+
 
 
 
