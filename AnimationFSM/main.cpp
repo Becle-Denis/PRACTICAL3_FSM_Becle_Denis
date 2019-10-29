@@ -38,7 +38,9 @@ int main()
 
 	
 	//Falling animatedSprite
+	animatedSprites.at(0).addFrame(sf::IntRect(260, 522, 50, 55));
 	animatedSprites.at(0).addFrame(sf::IntRect(210, 522, 50, 55));
+	animatedSprites.at(0).addFrame(sf::IntRect(310, 522, 50, 55));
 
 	//idle animatedSprite
 	animatedSprites.at(1).addFrame(sf::IntRect(65, 175, 55, 55));
@@ -53,6 +55,13 @@ int main()
 
 	//jumping animatedSprite
 	animatedSprites.at(2).addFrame(sf::IntRect(65, 580, 50, 55));
+	animatedSprites.at(2).addFrame(sf::IntRect(115, 580, 50, 55));
+	animatedSprites.at(2).addFrame(sf::IntRect(165, 580, 50, 55));
+	animatedSprites.at(2).addFrame(sf::IntRect(215, 580, 50, 55));
+	animatedSprites.at(2).addFrame(sf::IntRect(265, 580, 50, 55));
+	animatedSprites.at(2).addFrame(sf::IntRect(315, 580, 50, 55));
+	animatedSprites.at(2).addFrame(sf::IntRect(365, 580, 50, 55));
+	animatedSprites.at(2).addFrame(sf::IntRect(415, 580, 50, 55));
 
 	//landing animatedSprite
 	animatedSprites.at(3).addFrame(sf::IntRect(162, 522, 50, 55));
