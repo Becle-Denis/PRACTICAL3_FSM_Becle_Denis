@@ -35,8 +35,5 @@ void Player::update()
 {
 	//std::cout << "Handle Update" << std::endl;
 	m_state.update();
-	for (AnimatedSprite as : m_animated_sprites)
-	{
-		as.update();
-	}
+	m_animated_sprites.at(m_state.getSpriteIndex()).update();
 }

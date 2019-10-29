@@ -42,6 +42,14 @@ int main()
 
 	//idle animatedSprite
 	animatedSprites.at(1).addFrame(sf::IntRect(65, 175, 55, 55));
+	animatedSprites.at(1).addFrame(sf::IntRect(115, 175, 55, 55));
+	animatedSprites.at(1).addFrame(sf::IntRect(165, 175, 55, 55));
+	animatedSprites.at(1).addFrame(sf::IntRect(215, 175, 55, 55));
+	animatedSprites.at(1).addFrame(sf::IntRect(265, 175, 55, 55));
+	animatedSprites.at(1).addFrame(sf::IntRect(315, 175, 55, 55));
+	animatedSprites.at(1).addFrame(sf::IntRect(365, 175, 55, 55));
+	animatedSprites.at(1).addFrame(sf::IntRect(415, 175, 55, 55));
+
 
 	//jumping animatedSprite
 	animatedSprites.at(2).addFrame(sf::IntRect(65, 580, 50, 55));
@@ -51,9 +59,27 @@ int main()
 	
 	//WalkingLeft animatedSprite
 	animatedSprites.at(4).addFrame(sf::IntRect(65, 290, 55, 55));
+	animatedSprites.at(4).addFrame(sf::IntRect(115, 290, 55, 55));
+	animatedSprites.at(4).addFrame(sf::IntRect(165, 290, 55, 55));
+	animatedSprites.at(4).addFrame(sf::IntRect(215, 290, 55, 55));
+	animatedSprites.at(4).addFrame(sf::IntRect(265, 290, 55, 55));
+	animatedSprites.at(4).addFrame(sf::IntRect(315, 290, 55, 55));
+	animatedSprites.at(4).addFrame(sf::IntRect(365, 290, 55, 55));
+	animatedSprites.at(4).addFrame(sf::IntRect(415, 290, 55, 55));
+	animatedSprites.at(4).addFrame(sf::IntRect(465, 290, 55, 55));
+	animatedSprites.at(4).addFrame(sf::IntRect(515, 290, 55, 55));
 
 	//WalkingRigth animatedSprite
 	animatedSprites.at(5).addFrame(sf::IntRect(505, 290, 55, 55));
+	animatedSprites.at(5).addFrame(sf::IntRect(455, 290, 55, 55));
+	animatedSprites.at(5).addFrame(sf::IntRect(405, 290, 55, 55));
+	animatedSprites.at(5).addFrame(sf::IntRect(355, 290, 55, 55));
+	animatedSprites.at(5).addFrame(sf::IntRect(305, 290, 55, 55));
+	animatedSprites.at(5).addFrame(sf::IntRect(255, 290, 55, 55));
+	animatedSprites.at(5).addFrame(sf::IntRect(205, 290, 55, 55));
+	animatedSprites.at(5).addFrame(sf::IntRect(155, 290, 55, 55));
+	animatedSprites.at(5).addFrame(sf::IntRect(105, 290, 55, 55));
+	animatedSprites.at(5).addFrame(sf::IntRect(55, 290, 55, 55));
 
 	// Setup the Player
 	Player player(animatedSprites);
