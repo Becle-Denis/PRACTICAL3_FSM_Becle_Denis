@@ -11,9 +11,11 @@
 class State
 {
 public:
-	virtual void handleInput(PlayerFSM* a, sf::Event event) {}
+	virtual void handleInput(PlayerFSM* a, sf::Event event) {};
 
-	virtual void update(PlayerFSM* a) {}
+	virtual void update(PlayerFSM* a) {};
+
+	virtual int getSpriteIndex() { return 0; };
 
 	virtual void falling(PlayerFSM* a) {};
 

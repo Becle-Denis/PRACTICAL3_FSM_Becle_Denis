@@ -9,7 +9,7 @@ Player::Player()
 	m_state.setPrevious(new Idle());
 }
 
-Player::Player(const AnimatedSprite& s) : m_animated_sprite(s)
+Player::Player(const std::vector<AnimatedSprite>& s) : m_animated_sprites(s)
 {
 	m_state.setCurrent(new Idle());
 	m_state.setPrevious(new Idle());
@@ -19,9 +19,10 @@ Player::~Player() {}
 
 AnimatedSprite& Player::getAnimatedSprite()
 {
-	int frame = m_animated_sprite.getCurrentFrame();
-	m_animated_sprite.setTextureRect(m_animated_sprite.getFrame(frame));
-	return m_animated_sprite;
+	int spriteIndex = m_state.getSpriteIndex();
+	int frame = m_animated_sprites.at(spriteIndex).getCurrentFrame();
+	m_animated_sprites.at(spriteIndex).setTextureRect(m_animated_sprites.at(spriteIndex).getFrame(frame));
+	return m_animated_sprites.at(spriteIndex);
 }
 
 void Player::handleInput(sf::Event& event)
@@ -34,5 +35,8 @@ void Player::update()
 {
 	//std::cout << "Handle Update" << std::endl;
 	m_state.update();
-	m_animated_sprite.update();
+	for (AnimatedSprite as : m_animated_sprites)
+	{
+		as.update();
+	}
 }

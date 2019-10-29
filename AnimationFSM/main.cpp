@@ -17,18 +17,36 @@ int main()
 		DEBUG_MSG("Failed to load file");
 		return EXIT_FAILURE;
 	}
+	
+	//seting up animated sprites
+	std::vector<AnimatedSprite> animatedSprites;
+	for (int i = 0; i < 6; i++)
+	{
+		AnimatedSprite a(texture);
+		animatedSprites.push_back(a);
+	}
 
-	// Setup Players Default Animated Sprite
-	AnimatedSprite animated_sprite(texture);
-	animated_sprite.addFrame(sf::IntRect(3, 3, 84, 84));
-	animated_sprite.addFrame(sf::IntRect(88, 3, 84, 84));
-	animated_sprite.addFrame(sf::IntRect(173, 3, 84, 84));
-	animated_sprite.addFrame(sf::IntRect(258, 3, 84, 84));
-	animated_sprite.addFrame(sf::IntRect(343, 3, 84, 84));
-	animated_sprite.addFrame(sf::IntRect(428, 3, 84, 84));
+	
+	//Falling animatedSprite
+	animatedSprites.at(0).addFrame(sf::IntRect(3, 3, 84, 84));
+
+	//idle animatedSprite
+	animatedSprites.at(1).addFrame(sf::IntRect(88, 3, 84, 84));
+
+	//jumping animatedSprite
+	animatedSprites.at(2).addFrame(sf::IntRect(173, 3, 84, 84));
+
+	//landing animatedSprite
+	animatedSprites.at(3).addFrame(sf::IntRect(258, 3, 84, 84));
+
+	//WalkingLeft animatedSprite
+	animatedSprites.at(4).addFrame(sf::IntRect(343, 3, 84, 84));
+
+	//WalkingRigth animatedSprite
+	animatedSprites.at(5).addFrame(sf::IntRect(428, 3, 84, 84));
 
 	// Setup the Player
-	Player player(animated_sprite);
+	Player player(animatedSprites);
 	
 	// Start the game loop
 	while (window.isOpen())

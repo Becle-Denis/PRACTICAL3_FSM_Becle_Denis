@@ -15,6 +15,8 @@ public:
 	void falling(PlayerFSM* a) override;
 	void idle(PlayerFSM* a) override;
 
+	int getSpriteIndex() override;
+
 };
 
 #endif // !WALKINGRIGHT_H

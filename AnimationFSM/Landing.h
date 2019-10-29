@@ -13,6 +13,8 @@ public:
 
 	void idle(PlayerFSM* a) override;
 
+	int getSpriteIndex() override;
+
 private:
 	long int m_timeCreated;
 };

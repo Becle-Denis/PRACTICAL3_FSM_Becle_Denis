@@ -38,6 +38,11 @@ void Falling::landing(PlayerFSM* a)
 	delete previous;
 }
 
+int Falling::getSpriteIndex()
+{
+	return 0;
+}
+
 
 
 void Falling::jumping(PlayerFSM* a)

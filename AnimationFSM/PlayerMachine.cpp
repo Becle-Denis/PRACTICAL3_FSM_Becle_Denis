@@ -38,3 +38,8 @@ void PlayerFSM::handleInput(sf::Event& event)
 	m_current->handleInput(this, event);
 }
 
+int PlayerFSM::getSpriteIndex()
+{
+	return m_current->getSpriteIndex();
+}
+

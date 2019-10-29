@@ -51,6 +51,11 @@ void Jumping::falling(PlayerFSM* a)
 	delete previous;
 }
 
+int Jumping::getSpriteIndex()
+{
+	return 2;
+}
+
 
 /*
 void Jumping::idle(PlayerFSM* a)

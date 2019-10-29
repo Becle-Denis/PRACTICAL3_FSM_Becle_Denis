@@ -26,6 +26,8 @@ public:
 
 	void handleInput(sf::Event& event);
 
+	int getSpriteIndex();
+
 // Try uncommenting and comment the declaration above
 //private:
 //	class State* m_current;

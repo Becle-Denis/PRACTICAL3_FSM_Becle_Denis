@@ -16,6 +16,8 @@ public:
 	void jumping(PlayerFSM* a) override;
 	void landing(PlayerFSM* a) override;
 
+	int getSpriteIndex() override;
+
 private:
 	int m_remainingJump;
 

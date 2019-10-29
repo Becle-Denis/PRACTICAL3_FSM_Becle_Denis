@@ -17,6 +17,7 @@ public:
 	void walkingLeft(PlayerFSM* a) override;
 	void walkingRight(PlayerFSM* a) override;
 
+	int getSpriteIndex() override;
 };
 
 #endif // !IDLE_H

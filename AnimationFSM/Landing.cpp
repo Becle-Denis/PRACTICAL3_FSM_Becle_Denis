@@ -25,3 +25,8 @@ void Landing::idle(PlayerFSM* a)
 	a->setCurrent(new Idle());
 	delete previous;
 }
+
+int Landing::getSpriteIndex()
+{
+	return 3;
+}

@@ -46,6 +46,11 @@ void Idle::walkingRight(PlayerFSM* a)
 	delete previous;
 }
 
+int Idle::getSpriteIndex()
+{
+	return 1;
+}
+
 void Idle::jumping(PlayerFSM* a)
 {
 	std::cout << "Idle -> Jumping" << std::endl;

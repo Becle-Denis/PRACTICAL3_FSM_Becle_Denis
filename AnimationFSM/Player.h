@@ -10,11 +10,11 @@ class Player
 {
 private:
 	PlayerFSM m_state;
-	AnimatedSprite m_animated_sprite;
+	std::vector<AnimatedSprite> m_animated_sprites;
 	Player();
 
 public:
-	Player(const AnimatedSprite&);
+	Player(const std::vector<AnimatedSprite>&);
 	~Player();
 	AnimatedSprite& getAnimatedSprite();
 	void handleInput(sf::Event& event);

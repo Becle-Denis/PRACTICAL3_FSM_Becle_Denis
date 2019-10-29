@@ -28,6 +28,11 @@ void WalkingLeft::idle(PlayerFSM* a)
 	delete previous;
 }
 
+int WalkingLeft::getSpriteIndex()
+{
+	return 4;
+}
+
 
 
 void WalkingLeft::jumping(PlayerFSM* a)
