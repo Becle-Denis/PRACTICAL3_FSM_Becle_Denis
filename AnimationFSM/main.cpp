@@ -17,14 +17,24 @@ int main()
 		DEBUG_MSG("Failed to load file");
 		return EXIT_FAILURE;
 	}
+
+	// Load a reversedSprite
+	sf::Texture reverseTexture;
+	if (!reverseTexture.loadFromFile("assets\\raymanGridReverse.png")) {
+		DEBUG_MSG("Failed to load file");
+		return EXIT_FAILURE;
+	}
+	
 	
 	//seting up animated sprites
 	std::vector<AnimatedSprite> animatedSprites;
-	for (int i = 0; i < 6; i++)
+	for (int i = 0; i < 5; i++)
 	{
 		AnimatedSprite a(texture);
 		animatedSprites.push_back(a);
 	}
+	AnimatedSprite ar(reverseTexture);
+	animatedSprites.push_back(ar);
 
 	
 	//Falling animatedSprite
@@ -43,7 +53,7 @@ int main()
 	animatedSprites.at(4).addFrame(sf::IntRect(65, 290, 55, 55));
 
 	//WalkingRigth animatedSprite
-	animatedSprites.at(5).addFrame(sf::IntRect(65, 290, 55, 55));
+	animatedSprites.at(5).addFrame(sf::IntRect(505, 290, 55, 55));
 
 	// Setup the Player
 	Player player(animatedSprites);
