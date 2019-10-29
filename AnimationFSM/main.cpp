@@ -28,22 +28,22 @@ int main()
 
 	
 	//Falling animatedSprite
-	animatedSprites.at(0).addFrame(sf::IntRect(3, 3, 84, 84));
+	animatedSprites.at(0).addFrame(sf::IntRect(3, 3, 55, 55));
 
 	//idle animatedSprite
-	animatedSprites.at(1).addFrame(sf::IntRect(88, 3, 84, 84));
+	animatedSprites.at(1).addFrame(sf::IntRect(65, 175, 55, 55));
 
 	//jumping animatedSprite
-	animatedSprites.at(2).addFrame(sf::IntRect(173, 3, 84, 84));
+	animatedSprites.at(2).addFrame(sf::IntRect(173, 3, 55, 55));
 
 	//landing animatedSprite
-	animatedSprites.at(3).addFrame(sf::IntRect(258, 3, 84, 84));
+	animatedSprites.at(3).addFrame(sf::IntRect(258, 3, 55, 55));
 
 	//WalkingLeft animatedSprite
-	animatedSprites.at(4).addFrame(sf::IntRect(343, 3, 84, 84));
+	animatedSprites.at(4).addFrame(sf::IntRect(65, 290, 55, 55));
 
 	//WalkingRigth animatedSprite
-	animatedSprites.at(5).addFrame(sf::IntRect(428, 3, 84, 84));
+	animatedSprites.at(5).addFrame(sf::IntRect(65, 290, 55, 55));
 
 	// Setup the Player
 	Player player(animatedSprites);
